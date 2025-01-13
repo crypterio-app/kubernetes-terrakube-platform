@@ -5,7 +5,7 @@
 ## Terraform Module - Terrakube | Kubernetes
 Terrakube is an open source collaboration platform for running remote infrastructure as code operations using Terraform or OpenTofu that aims to be a complete replacement for close source tools like Terraform Enterprise, Scalr or Env0.
 
-The platform can be easily  integrated with different authentication providers like Azure Active Directory, Google Cloud Identity, Github, Gitlab or any other provider supported by Dex.
+The platform can be easily integrated with different authentication providers like Azure Active Directory, Google Cloud Identity, Keycloak , Pomerium , Github, Gitlab or any other provider supported by Dex.
 
 
 ☁️ Features
