@@ -32,9 +32,10 @@ The platform can be easily integrated with different authentication providers li
 
 
 🔨 Integration :
+
 ```
-🔌 Github
-🔌 Bitbucket
-🔌 Azure DevOps
+🔗 Github
+🔗 Bitbucket
+🔗 Azure DevOps
 ```
 
