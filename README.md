@@ -8,7 +8,7 @@ Terrakube is an open source collaboration platform for running remote infrastruc
 The platform can be easily installed in any kubernetes cluster, you can easily customize the platform using other open source tools already available for terraform (Example: terratag, infracost, terrascan, etc) and you can integrate the tool with different authentication providers like Azure Active Directory, Google Cloud Identity, Github, Gitlab or any other provider supported by Dex.
 
 
-🎯 Features
+☁️ Features
 ```
 ✅ Organizations
 ✅ Workspace API
@@ -21,20 +21,20 @@ The platform can be easily installed in any kubernetes cluster, you can easily c
 
 ### Complements :
 ```
-⭐️ Jobs
-⭐️ Executor
-⭐️ Open Registry
-⭐️ Cloud Storage
-⭐️ RDBMS
-⭐️ Security
-⭐️ CLI
+📃 Jobs
+📃 Executor
+📃 Open Registry
+📃 Cloud Storage
+📃 RDBMS
+📃 Security
+📃 CLI
 ```
 
 
 🔨 Integration :
 ```
-# Github
-# Bitbucket
-# Azure DevOps
+🔌 Github
+🔌 Bitbucket
+🔌 Azure DevOps
 ```
 
