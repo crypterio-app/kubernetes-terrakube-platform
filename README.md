@@ -10,12 +10,12 @@ The platform can be easily integrated with different authentication providers li
 
 ☁️ Features
 ```
-✅ Organizations
-✅ Workspace API
-✅ Modules
-✅ Providers
-✅ Teams
-✅ Teamplate
+✅ Organizations:
+✅ Workspace API:
+✅ Modules:
+✅ Providers:
+✅ Teams:
+✅ Teamplate:
 ```
 
 
@@ -34,8 +34,8 @@ The platform can be easily integrated with different authentication providers li
 🔨 Integration :
 
 ```
-🔗 Github
-🔗 Bitbucket
-🔗 Azure DevOps
+🔌 Github
+🔌 Bitbucket
+🔌 Azure DevOps
 ```
 
