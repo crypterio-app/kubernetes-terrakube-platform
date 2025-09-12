@@ -35,6 +35,6 @@ The platform can be easily integrated with different authentication providers li
 ```
 🔌 Github
 🔌 Bitbucket
-🔌 Azure DevOps
+🔌 GitLab
 ```
 
