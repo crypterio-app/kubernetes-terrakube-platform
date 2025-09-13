@@ -9,7 +9,7 @@ The platform can be easily integrated with different authentication providers li
 
 ☁️ Features
 ```
-✅ Multi-Cloud Ingress Support: Generic (NGINX), AWS ALB, GKE ingress controllers and AWS ALB (WIP) and Gateway API
+✅ Multi-Cloud Ingress Support: Generic (NGINX), AWS ALB, GKE ingress controllers and Gateway API
 ✅ TLS/SSL Configuration: Per-service TLS configuration with custom certificates
 ✅ Google Cloud Integration: GKE managed certificates, Cloud Armor, and BackendConfig support
 ✅ AWS Integration: ALB ingress with shared load balancer support
@@ -19,7 +19,6 @@ The platform can be easily integrated with different authentication providers li
 ✅ Module Registry: Private Terraform module registry
 ✅ Workspace Management: Terraform workspace execution and management
 ```
-
 
 🎯 Complements :
 ```
@@ -32,12 +31,11 @@ The platform can be easily integrated with different authentication providers li
 📃 CLI
 ```
 
-
-🔨 Integration :
-
+🚀  
 ```
-🔌 Github
-🔌 Bitbucket
-🔌 GitLab
+terraform init
+terraform validate
+terraform plan -var-file="template.tfvars"
+terraform apply -var-file="template.tfvars" -auto-approve
 ```
 
