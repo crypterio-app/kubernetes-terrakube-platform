@@ -9,16 +9,19 @@ The platform can be easily integrated with different authentication providers li
 
 ☁️ Features
 ```
-✅ Organizations:
-✅ Workspace API:
-✅ Modules:
-✅ Providers:
-✅ Teams:
-✅ Teamplate:
+✅ Multi-Cloud Ingress Support: Generic (NGINX), AWS ALB, GKE ingress controllers and AWS ALB (WIP) and Gateway API
+✅ TLS/SSL Configuration: Per-service TLS configuration with custom certificates
+✅ Google Cloud Integration: GKE managed certificates, Cloud Armor, and BackendConfig support
+✅ AWS Integration: ALB ingress with shared load balancer support
+✅ Authentication: Dex OIDC integration with GitHub, Google, and other providers
+✅ Storage: MinIO S3-compatible storage or external S3
+✅ Database: PostgreSQL support with optional external database
+✅ Module Registry: Private Terraform module registry
+✅ Workspace Management: Terraform workspace execution and management
 ```
 
 
-### Complements :
+🎯 Complements :
 ```
 📃 Jobs
 📃 Executor
