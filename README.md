@@ -2,7 +2,7 @@
 
 
 ## Terrakube | Kubernetes ☸️
-Terrakube is an open-source platform for automating and collaborating on infrastructure as code tasks using Terraform or OpenTofu. It distinguishes itself by supporting customizable workflows, private registries, and integrations with GitHub, GitLab, and other version control systems. The platform also allows dynamic credential management and ephemeral workspaces, offering a secure and scalable alternative to proprietary tools like Terraform Enterprise.
+Terrakube is an open-source platform for automating and collaborating on infrastructure as code tasks using Terraform or OpenTofu. It distinguishes itself by supporting customizable workflows, private registries, and integrations with version control systems. The platform also allows dynamic credential management and ephemeral workspaces, offering a secure and scalable alternative to proprietary tools like Terraform Enterprise.
 
 The platform can be easily integrated with different authentication providers like Azure Active Directory, Google Cloud Identity, Keycloak , Pomerium , Github, Gitlab or any other provider supported by Dex.
 
