@@ -44,9 +44,23 @@ externalDatabase:
 auth:
   oidc:
     enabled: true
-    clientId: "terrakube-client"
-    clientSecret: "super-secret-client"
-    issuerUri: "https://accounts.google.com"  # example for Google OIDC
+
+    # OIDC app you register in GitHub
+    clientId: "global"
+    clientSecret: "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"
+
+    # GitHub OIDC issuer
+    issuerUri: "https://github.com/login/oauth"
+
+    # Scopes required
+    scopes: "read:user user:email"
+
+    # Redirect URI must match the one you configure in GitHub OAuth App
+    redirectUri: "https://terrakube.example.com/login/oauth2/code/oidc"
+
+    # Claim mappings
+    usernameClaim: "login"   # GitHub username
+    groupsClaim: ""          # GitHub doesn’t expose orgs/teams directly via OIDC
 
 resources:
   requests:
