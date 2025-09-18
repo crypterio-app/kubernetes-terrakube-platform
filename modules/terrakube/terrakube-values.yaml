@@ -1,6 +1,6 @@
 
 global:
-  host: terrakube.example.com   # replace with your domain
+  host: terrakube.appflex.io   # replace with your domain
 
 replicaCount: 3   # HA deployment
 
