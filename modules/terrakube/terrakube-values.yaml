@@ -1,4 +1,105 @@
 
+
+global:
+  host: terrakube.appflex.io   # your domain
+
+replicaCount: 3   # HA deployment
+
+image:
+  repository: azbuilder/terrakube
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - host: terrakube.appflex.io
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: terrakube-tls
+      hosts:
+        - terrakube.appflex.io
+
+# Built-in PostgreSQL
+postgresql:
+  enabled: true
+  image:
+    repository: bitnami/postgresql
+    tag: 15.4.0   # stable version
+  auth:
+    postgresPassword: "strong-postgres-password"   # superuser password
+    username: terrakube
+    password: "terrakube-pass"                      # Terrakube DB user
+    database: terrakube
+
+# MinIO
+minio:
+  image:
+    repository: bitnami/minio
+    tag: 14.6.18   # stable version
+
+# Redis
+redis:
+  image:
+    repository: bitnami/redis
+    tag: 7.2.1     # stable version
+  master:
+    persistence:
+      enabled: true
+      size: 8Gi
+      storageClass: gp2
+
+# GitHub OIDC authentication
+auth:
+  oidc:
+    enabled: true
+    clientId: "Ov23liM9E3TcroJZmUcg"                # GitHub OAuth app client ID
+    clientSecret: "662fda4aad42a0747da32f39a58834d9c33fe550"    # GitHub OAuth app client secret
+    issuerUri: "https://github.com/login/oauth"
+    scopes: "read:user user:email"
+    redirectUri: "https://terrakube.appflex.io/login/oauth2/code/oidc"
+    usernameClaim: "login"
+    groupsClaim: ""                       # GitHub OIDC does not expose orgs/teams
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 1Gi
+  limits:
+    cpu: 2
+    memory: 2Gi
+
+persistence:
+  enabled: true
+  size: 8i
+  storageClass: ""   # adjust for your cloud provider
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+
+
+
+
+
+
+
+
+
+
+
+
 global:
   host: terrakube.appflex.io   # replace with your domain
 
