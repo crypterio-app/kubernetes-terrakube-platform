@@ -27,7 +27,7 @@ ingress:
   tls:
     - secretName: terrakube-tls
       hosts:
-        - terrakube.example.com
+        - terrakube.appflex.io 
 
 # Disable built-in PostgreSQL and use external DB
 postgresql:
@@ -56,7 +56,7 @@ auth:
     scopes: "read:user user:email"
 
     # Redirect URI must match the one you configure in GitHub OAuth App
-    redirectUri: "https://terrakube.example.com/login/oauth2/code/oidc"
+    redirectUri: "https://terrakube.appflex.io/login/oauth2/code/oidc"
 
     # Claim mappings
     usernameClaim: "login"   # GitHub username
