@@ -7,8 +7,7 @@ resource "helm_release" "terrakube" {
   #version    = "3.27.6"  # replace with latest stable version
 
   create_namespace = true
-
   values = [
-    file("terrakube-values.yaml")  # optional: custom values
+    file("${path.module}/terrakube-values.yaml")
   ]
 }
