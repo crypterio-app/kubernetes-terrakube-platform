@@ -1,4 +1,5 @@
-![Terrakube-Apps](https://github.com/user-attachments/assets/73ae0051-66ee-416a-85ab-6d46c08e1417)
+<img width="1999" height="775" alt="image" src="https://github.com/user-attachments/assets/68c311e9-d9df-4a3c-b035-eb14553d7138" />
+
 
 
 ## Terrakube | Kubernetes ☸️
