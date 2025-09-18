@@ -1,5 +1,4 @@
-<img width="1999" height="775" alt="image" src="https://github.com/user-attachments/assets/c65b44db-b402-4a6b-a129-cd21fb519a63" />
-
+<img width="1999" height="775" alt="image" src="https://github.com/user-attachments/assets/ae9caf65-a68b-49b2-b200-fd3f61352ed8" />
 
 
 ## Terrakube | Kubernetes ☸️
