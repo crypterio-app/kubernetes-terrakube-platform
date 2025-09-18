@@ -28,18 +28,15 @@ ingress:
     - secretName: terrakube-tls
       hosts:
         - terrakube.appflex.io 
-
-# Disable built-in PostgreSQL and use external DB
+        
+# Built-in PostgreSQL
 postgresql:
-  enabled: false
-
-externalDatabase:
   enabled: true
-  host: terrakube-db.example.com   # your RDS/Aurora/CloudSQL endpoint
-  port: 5432
-  user: terrakube
-  password: terrakubeStrongPass123
-  database: terrakube
+  auth:
+    postgresPassword: "q1w2e3r4100@!"   # superuser password
+    username: terrakube
+    password: "terrakube"               # Terrakube DB user
+    database: terrakube
 
 auth:
   oidc:
