@@ -1,5 +1,6 @@
 
 
+
 resource "local_file" "metallb_config" {
   content = templatefile("${path.module}/metallb.config.crd.tmpl",
     {
