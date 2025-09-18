@@ -4,7 +4,7 @@ resource "helm_release" "terrakube" {
   namespace  = "terrakube"
   repository = "https://terrakube-io.github.io/terrakube-helm-chart"  # official Helm repo
   chart      = "terrakube"
-  #version    = "0.10.0"  # replace with latest stable version
+  #version    = "3.27.6"  # replace with latest stable version
 
   create_namespace = true
 
