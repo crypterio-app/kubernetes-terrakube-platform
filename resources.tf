@@ -23,9 +23,14 @@ module "nginx" {
   depends_on = [module.metallb]
 }
 
+module "minio" {
+  source = "./modules/minio"
+  depends_on = [module.nginx]
+}
+
 module "terrakube" {
   source = "./modules/terrakube"
-  depends_on = [module.nginx]
+  depends_on = [module.minio]
 }
 
 
