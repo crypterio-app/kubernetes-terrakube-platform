@@ -22,13 +22,13 @@ The platform can be easily integrated with different authentication providers li
 
 📝 Complements :
 ```
-❄️ Jobs
-❄️ Executor
-❄️ Open Registry
-❄️ Cloud Storage
-❄️ RDBMS
-❄️ Security
-❄️ CLI
+⬇️ Jobs
+⬇️ Executor
+⬇️ Open Registry
+⬇️ Cloud Storage
+⬇️ RDBMS
+⬇️ Security
+⬇️ CLI
 ```
 
 🚀  
