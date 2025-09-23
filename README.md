@@ -20,15 +20,15 @@ The platform can be easily integrated with different authentication providers li
 ✅ Workspace Management: Terraform workspace execution and management
 ```
 
-🎯 Complements :
+📝 Complements :
 ```
-📃 Jobs
-📃 Executor
-📃 Open Registry
-📃 Cloud Storage
-📃 RDBMS
-📃 Security
-📃 CLI
+❄️ Jobs
+❄️ Executor
+❄️ Open Registry
+❄️ Cloud Storage
+❄️ RDBMS
+❄️ Security
+❄️ CLI
 ```
 
 🚀  
