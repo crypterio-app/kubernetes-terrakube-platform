@@ -7,42 +7,32 @@ security:
   dexClientId: "terrakube"
   dexIssuerUri: "https://terrakube-api.appflex.io/dex"
 
-
 ## Dex
 dex:
   config:
     issuer: https://terrakube-api.appflex.io/dex
 
     connectors:
-    - type: oidc
-      name: keycloak
-      id: keycloak
-      config:
-        issuer: https://auth.appflex.io/auth/realms/develop #http://<KEYCLOAK FQDN/IPADDR>:PORT/auth/realms/<Realm>
-        clientID: terrakube
-        clientSecret: <REDACTED>
-        redirectURI: https://terrakube-api.appflex.io/dex/callback #https://<metal-lb or cloud LB>/dex/callback
-        loadAllGroups: true
-        scopes:
-        - openid
-        - profile
-        - email
-        - groups
-        insecureSkipEmailVerified: true
-        insecureEnableGroups: true
-        userIDKey: email
-        userNameKey: email
+      # 🔑 GitHub OIDC login
+      - type: github
+        id: github
+        name: GitHub
+        config:
+          clientID: "Ov23liQUwQ10Bhm7Rodt"
+          clientSecret: "493f3e0535dd4c8856a0b46b1dafb7bc30458516"
+          redirectURI: "https://terrakube-api.appflex.io/dex/callback"
+          orgs:
+            - name: appflex   # optional, restrict login to your GitHub org
 
     staticClients:
-    - id: terrakube
-      redirectURIs:
-      - 'https://terrakube-ui.appflex.io'
-      - '/device/callback'
-      - 'http://localhost:10000/login'
-      - 'http://localhost:10001/login'
-      name: 'terrakube'
-      public: true
-
+      - id: terrakube
+        redirectURIs:
+          - "https://terrakube-ui.appflex.io"
+          - "/device/callback"
+          - "http://localhost:10000/login"
+          - "http://localhost:10001/login"
+        name: "terrakube"
+        public: true
 
 ## Terraform Storage
 storage:
@@ -53,17 +43,19 @@ storage:
     bucketName: "terrakube"
     endpoint: "http://minio.default.svc.cluster.local:9000"
 
-
 ## Ingress properties
 ingress:
   useTls: true
   ui:
     domain: "terrakube-ui.appflex.io"
-    tlsSecretName: leadercapital.net
+    tlsSecretName: appflex.io
   api:
     domain: "terrakube-api.appflex.io"
-    tlsSecretName: leadercapital.net
+    tlsSecretName: appflex.io
   registry:
     domain: "terrakube-reg.appflex.io"
     tlsSecretName: appflex.io
 
+
+
+    
