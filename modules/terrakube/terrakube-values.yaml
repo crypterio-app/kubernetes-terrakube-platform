@@ -5,23 +5,23 @@ security:
   useOpenLDAP: false
   adminGroup: "TerrakubeAdmin"
   dexClientId: "terrakube"
-  dexIssuerUri: "https://terrakube-api.leadercapital.net/dex"
+  dexIssuerUri: "https://terrakube-api.appflex.io/dex"
 
 
 ## Dex
 dex:
   config:
-    issuer: https://terrakube-api.leadercapital.net/dex
+    issuer: https://terrakube-api.appflex.io/dex
 
     connectors:
     - type: oidc
       name: keycloak
       id: keycloak
       config:
-        issuer: https://auth.leaderdns.net/auth/realms/develop #http://<KEYCLOAK FQDN/IPADDR>:PORT/auth/realms/<Realm>
+        issuer: https://auth.appflex.io/auth/realms/develop #http://<KEYCLOAK FQDN/IPADDR>:PORT/auth/realms/<Realm>
         clientID: terrakube
         clientSecret: <REDACTED>
-        redirectURI: https://terrakube-api.leadercapital.net/dex/callback #https://<metal-lb or cloud LB>/dex/callback
+        redirectURI: https://terrakube-api.appflex.io/dex/callback #https://<metal-lb or cloud LB>/dex/callback
         loadAllGroups: true
         scopes:
         - openid
@@ -36,7 +36,7 @@ dex:
     staticClients:
     - id: terrakube
       redirectURIs:
-      - 'https://terrakube-ui.leadercapital.net'
+      - 'https://terrakube-ui.appflex.io'
       - '/device/callback'
       - 'http://localhost:10000/login'
       - 'http://localhost:10001/login'
@@ -58,12 +58,12 @@ storage:
 ingress:
   useTls: true
   ui:
-    domain: "terrakube-ui.leadercapital.net"
+    domain: "terrakube-ui.appflex.io"
     tlsSecretName: leadercapital.net
   api:
-    domain: "terrakube-api.leadercapital.net"
+    domain: "terrakube-api.appflex.io"
     tlsSecretName: leadercapital.net
   registry:
-    domain: "terrakube-reg.leadercapital.net"
-    tlsSecretName: leadercapital.net
+    domain: "terrakube-reg.appflex.io"
+    tlsSecretName: appflex.io
 
